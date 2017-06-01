@@ -6,6 +6,9 @@ const Hapi = require('hapi');
 const fs = require('fs');
 const Path = require('path');
 
+
+
+
 const server = new Hapi.Server({
     connections: {
         routes: {
@@ -68,6 +71,7 @@ server.register([require('hapi-auth-basic'), require('inert')], (err) => {
         method: 'GET',
         path: '/files.json',
         config: {
+            cors: true,
             handler: function (request, reply) {
                 fs.readdir(__dirname + "/uploads", function(err, result) {
                     reply(result.filter(function(fileName) {
