@@ -1,0 +1,27 @@
+{
+  "name": "box",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "service": "pm2 start server.js --name='box'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitterulf/box.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitterulf/box/issues"
+  },
+  "homepage": "https://github.com/bitterulf/box#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "hapi": "^16.1.1",
+    "hapi-auth-basic": "^4.2.0",
+    "inert": "^4.2.0"
+  }
+}

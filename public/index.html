@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link href="style/basic.min.css" rel="stylesheet">
+        <link href="style/dropzone.min.css" rel="stylesheet">
+        <script src="js/dropzone.min.js">
+        </script>
+        <script>
+            Dropzone.options.dropzone = {
+              init: function() {
+                this.on("complete", function(status) {
+                    console.log(status);
+                });
+              }
+            };
+        </script>
+        <title>box</title>
+    </head>
+    <body>
+        <form action="/file-upload" class="dropzone" id="dropzone">
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        </form>
+    </body>
+</html>
